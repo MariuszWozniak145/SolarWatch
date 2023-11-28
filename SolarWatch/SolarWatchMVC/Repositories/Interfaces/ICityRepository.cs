@@ -1,4 +1,4 @@
-﻿using SolarWatchMVC.Models;
+﻿using SolarWatchMVC.Data;
 
 namespace SolarWatchMVC.Repositories.Interfaces;
 

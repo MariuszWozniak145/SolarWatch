@@ -1,5 +1,5 @@
-﻿using SolarWatchMVC.Databases.Contexts;
-using SolarWatchMVC.Models;
+﻿using SolarWatchMVC.Data;
+using SolarWatchMVC.Databases.Contexts;
 using SolarWatchMVC.Repositories.Interfaces;
 
 namespace SolarWatchMVC.Repositories;

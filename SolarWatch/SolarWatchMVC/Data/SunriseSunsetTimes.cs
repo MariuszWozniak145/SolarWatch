@@ -1,4 +1,4 @@
-﻿namespace SolarWatchMVC.Models;
+﻿namespace SolarWatchMVC.Data;
 
 public class SunriseSunsetTimes
 {

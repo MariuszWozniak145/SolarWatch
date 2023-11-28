@@ -1,0 +1,44 @@
+﻿@model SunriseSunsetForecastModel
+@{
+    ViewData["Title"] = "Sunrice Sunset Forecast";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Get the sunrise and sunset forecast based on the given information</h1>
+
+    <form method="get" asp-controller="SunriseSunsetForecast" asp-action="GetSunriseSunsetForecast">
+        <div class="form-group">
+            <label asp-for="GetSunriseSunsetForecastModel.cityName" class="control-label">City</label>
+            <input asp-for="GetSunriseSunsetForecastModel.cityName" class="form-control" placeholder="For example: London" required/>
+            <span asp-validation-for="GetSunriseSunsetForecastModel.cityName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="GetSunriseSunsetForecastModel.state" class="control-label">State</label>
+            <input asp-for="GetSunriseSunsetForecastModel.state" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="GetSunriseSunsetForecastModel.country" class="control-label">Country</label>
+            <input asp-for="GetSunriseSunsetForecastModel.country" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="GetSunriseSunsetForecastModel.date" class="control-label"></label>
+            <input asp-for="GetSunriseSunsetForecastModel.date" class="form-control" type="date" value="@Model.GetSunriseSunsetForecastModel.date.ToString("yyyy-MM-dd")" required />
+            <span asp-validation-for="GetSunriseSunsetForecastModel.date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Get forecast" class="btn btn-primary" />
+        </div>
+    </form>
+
+
+
+        @if (Model.DisplaySunriseSunsetForecastModel.cityName != null)
+        {
+            <p>City: @Model.DisplaySunriseSunsetForecastModel.cityName</p>
+            <p>Date: @Model.DisplaySunriseSunsetForecastModel.date</p>
+            <p>Additional Info: vhjhjbhjb</p>
+        }
+</div>
