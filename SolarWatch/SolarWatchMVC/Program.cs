@@ -6,6 +6,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContexts(builder.Configuration);
 builder.Services.AddRepositories();
+builder.Services.AddServices();
 
 var app = builder.Build();
 

@@ -15,7 +15,7 @@ public class SunriseSunsetForecastController : Controller
 
     public async Task<IActionResult> Index(DisplaySunriseSunsetForecastModel model)
     {
-        ViewBag.Errors = TempData["Errors"] ?? new string[0];
+        ViewBag.Errors = TempData["Errors"] ?? Array.Empty<string>();
         var data = new SunriseSunsetForecastModel
         {
             GetSunriseSunsetForecastModel = new GetSunriseSunsetForecastModel() { date = DateOnly.FromDateTime(DateTime.Now) },

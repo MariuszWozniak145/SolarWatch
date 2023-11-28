@@ -2,6 +2,7 @@
 using SolarWatchMVC.Databases.Contexts;
 using SolarWatchMVC.Repositories;
 using SolarWatchMVC.Repositories.Interfaces;
+using SolarWatchMVC.Services.LocationDataProvider;
 
 namespace SolarWatchMVC.Configurations;
 
@@ -17,5 +18,10 @@ public static class ServiceCollectionExtension
     {
         services.AddScoped<ICityRepository, CityRepository>();
         services.AddScoped<ISunriseSunsetTimesRepository, SunriseSunsetTimesRepository>();
+    }
+
+    public static void AddServices(this IServiceCollection services)
+    {
+        services.AddScoped<ILocationDataProvider, OpenWeatherMapApi>();
     }
 }
