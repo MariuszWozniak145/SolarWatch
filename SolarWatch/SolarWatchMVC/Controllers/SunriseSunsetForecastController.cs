@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SolarWatchMVC.Models;
 using SolarWatchMVC.Repositories.Interfaces;
+using SolarWatchMVC.Services.LocationDataProvider;
 
 namespace SolarWatchMVC.Controllers;
 
