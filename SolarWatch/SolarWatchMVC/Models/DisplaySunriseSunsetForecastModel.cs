@@ -9,5 +9,5 @@ public class DisplaySunriseSunsetForecastModel
     public string? state { get; init; }
     public string? country { get; init; }
     [Required]
-    public DateOnly date { get; init; }
+    public string date { get; init; }
 }

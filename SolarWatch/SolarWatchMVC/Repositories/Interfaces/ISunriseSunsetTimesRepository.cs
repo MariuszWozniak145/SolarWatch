@@ -1,5 +1,8 @@
-﻿namespace SolarWatchMVC.Repositories.Interfaces;
+﻿using SolarWatchMVC.Data;
 
-public interface ISunriseSunsetTimesRepository
+namespace SolarWatchMVC.Repositories.Interfaces;
+
+public interface ISunriseSunsetTimesRepository : IBaseRepository<SunriseSunsetTimes>
 {
+    public Task<SunriseSunsetTimes?> GetByDetailsAsync(Guid cityId, string date);
 }
