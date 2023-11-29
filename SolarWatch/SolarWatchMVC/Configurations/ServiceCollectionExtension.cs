@@ -4,6 +4,7 @@ using SolarWatchMVC.Repositories;
 using SolarWatchMVC.Repositories.Interfaces;
 using SolarWatchMVC.Services.JSON;
 using SolarWatchMVC.Services.LocationDataProvider;
+using SolarWatchMVC.Services.SunriseSunsetDataProvider;
 
 namespace SolarWatchMVC.Configurations;
 
@@ -24,6 +25,7 @@ public static class ServiceCollectionExtension
     public static void AddServices(this IServiceCollection services)
     {
         services.AddScoped<ILocationDataProvider, OpenWeatherMapApi>();
+        services.AddScoped<ISunriseSunsetDataProvider, SunriseSunsetApi>();
         services.AddScoped<IJsonProcessor, JsonProcessor>();
     }
 }

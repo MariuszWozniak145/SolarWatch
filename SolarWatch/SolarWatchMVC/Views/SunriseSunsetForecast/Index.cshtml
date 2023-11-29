@@ -15,23 +15,23 @@
                     <p style="color:red">@error</p>
                 }
             }
-            <label asp-for="GetSunriseSunsetForecastModel.cityName" class="control-label mt-3">City</label>
-            <input asp-for="GetSunriseSunsetForecastModel.cityName" class="form-control mt-1" placeholder="e.g. London" />
+            <label asp-for="GetSunriseSunsetForecastModel.CityName" class="control-label mt-3">City</label>
+            <input asp-for="GetSunriseSunsetForecastModel.CityName" class="form-control mt-1" placeholder="e.g. London" />
         </div>
 
         <div class="form-group">
-            <label asp-for="GetSunriseSunsetForecastModel.state" class="control-label mt-3">State</label>
-            <input asp-for="GetSunriseSunsetForecastModel.state" class="form-control mt-1" placeholder="e.g. Masovian Voivodeship - Not required field" />
+            <label asp-for="GetSunriseSunsetForecastModel.State" class="control-label mt-3">State</label>
+            <input asp-for="GetSunriseSunsetForecastModel.State" class="form-control mt-1" placeholder="e.g. Masovian Voivodeship - Not required field" />
         </div>
 
         <div class="form-group">
-            <label asp-for="GetSunriseSunsetForecastModel.country" class="control-label mt-3">Country</label>
-            <input asp-for="GetSunriseSunsetForecastModel.country" class="form-control mt-1" placeholder="e.g. PL - Not required field"/>
+            <label asp-for="GetSunriseSunsetForecastModel.Country" class="control-label mt-3">Country</label>
+            <input asp-for="GetSunriseSunsetForecastModel.Country" class="form-control mt-1" placeholder="e.g. PL - Not required field" />
         </div>
 
         <div class="form-group">
-            <label asp-for="GetSunriseSunsetForecastModel.date" class="control-label mt-3">Date</label>
-            <input asp-for="GetSunriseSunsetForecastModel.date" class="form-control mt-1" type="date" value="@Model.GetSunriseSunsetForecastModel.date.ToString("yyyy-MM-dd")" />
+            <label asp-for="GetSunriseSunsetForecastModel.Date" class="control-label mt-3">Date</label>
+            <input asp-for="GetSunriseSunsetForecastModel.Date" class="form-control mt-1" type="date" value="@Model.GetSunriseSunsetForecastModel.Date.ToString("yyyy-MM-dd")" />
         </div>
         <div class="form-group">
             <input type="submit" value="Get forecast" class="btn btn-primary mt-5" />
@@ -39,10 +39,15 @@
     </form>
 
 
-    @if (Model.DisplaySunriseSunsetForecastModel.cityName != null)
+    @if (Model.DisplaySunriseSunsetForecastModel.CityName != null)
     {
-        <p>City: @Model.DisplaySunriseSunsetForecastModel.cityName</p>
-        <p>Date: @Model.DisplaySunriseSunsetForecastModel.date</p>
-        <p>Additional Info: vhjhjbhjb</p>
+        <p>City: @Model.DisplaySunriseSunsetForecastModel.CityName</p>
+        <p>State: @Model.DisplaySunriseSunsetForecastModel.State</p>
+        <p>Country: @Model.DisplaySunriseSunsetForecastModel.Country</p>
+        <p>Latitude: @Model.DisplaySunriseSunsetForecastModel.Latitude</p>
+        <p>Longitude: @Model.DisplaySunriseSunsetForecastModel.Longitude</p>
+        <p>Sunrise: @Model.DisplaySunriseSunsetForecastModel.Sunrise</p>
+        <p>Sunset: @Model.DisplaySunriseSunsetForecastModel.Sunset</p>
+        <p>Date: @Model.DisplaySunriseSunsetForecastModel.Date</p>
     }
 </div>

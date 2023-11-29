@@ -5,9 +5,17 @@ namespace SolarWatchMVC.Models;
 public class DisplaySunriseSunsetForecastModel
 {
     [Required]
-    public string cityName { get; init; }
-    public string? state { get; init; }
-    public string? country { get; init; }
+    public string CityName { get; init; }
+    public string? State { get; init; }
+    public string? Country { get; init; }
     [Required]
-    public string date { get; init; }
+    public double Latitude { get; init; }
+    [Required]
+    public double Longitude { get; init; }
+    [Required]
+    public string Sunrise { get; init; }
+    [Required]
+    public string Sunset { get; init; }
+    [Required]
+    public string Date { get; init; }
 }
